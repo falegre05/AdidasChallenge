@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>spring.challenge</groupId>
 	<artifactId>citiesClient</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>citiesClient</name>
 	<description>Proof of concept</description>
 

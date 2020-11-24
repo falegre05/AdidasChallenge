@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+import org.springframework.stereotype.Service;
+
 import spring.challenge.citiesClient.exceptions.CityNotFoundException;
 import spring.challenge.citiesClient.repository.ItineraryRepository;
 import spring.challenge.citiesClient.repository.model.City;
@@ -15,6 +17,7 @@ import spring.challenge.citiesClient.service.model.Itinerary.Order;
 import spring.challenge.citiesClient.service.model.ItineraryConnsNode;
 import spring.challenge.citiesClient.service.model.ItineraryTimeNode;
 
+@Service
 public class ItineraryService {
 
     private List<City> mCities;
@@ -95,6 +98,7 @@ public class ItineraryService {
         ItineraryTimeNode start = new ItineraryTimeNode(origin, null, 0, origin.calcEstimatedTime(destiny), 0);
         openSet.add(start);
         allNodes.put(origin, start);
+        openSet.stream();
 
         while (!openSet.isEmpty()) {
             ItineraryTimeNode next = openSet.poll();
