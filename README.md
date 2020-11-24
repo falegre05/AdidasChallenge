@@ -24,6 +24,8 @@ docker-compose up -d
 ```
 
 ## Access
+I include some postman examples of how to interact with both citiesServer and citiesClient api through Postman in "postman_collection.json", which you can import directly.
+
 ### Postgres
 ```
 http://localhost:5436/
