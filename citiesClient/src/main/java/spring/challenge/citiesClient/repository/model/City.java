@@ -96,7 +96,8 @@ public class City {
         return "City [id=" + id + ", name=" + name + ", coordX=" + coordX + ", coordY=" + coordY + "]";
     }
 
-    // Calc distance in straight line between 2 cities using Pythagoran trigonometry
+    // Calc distance in straight line between 2 cities using Pythagorean
+    // trigonometry
     public double calcStraightLine(City dest) {
         final int EARTH_RADIUS = 6371;
 
@@ -122,7 +123,6 @@ public class City {
 
     // Estimates how many connections with other cities will take to arrive from one
     // city to another in straight line
-
     public int calcEstimatedConns(City dest) {
         return (int) (this.calcStraightLine(dest) / CitiesClientApplication.KM_CONN);
     }

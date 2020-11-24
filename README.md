@@ -1,6 +1,6 @@
 # Adidas Coding Challenge
 
-This is a project based on two different services that communicate through a Rest API. CitiesServer accesses a Postgres database and offers information for citiesClient, which is in charge of calculating the shortest routes, both in terms of time and connections, between some Spanish cities.
+This is a project based on two different services that communicate through a Rest API. CitiesServer accesses a Postgres database and offers information for citiesClient, which is in charge of calculating the shortest routes, both in terms of time and connections, between some Spanish cities. For this porpuse, A* algorithm is used, estimating heuristic values with the city's coordinates and Pythagorean trigonometry.
 
 ## Build & Run
 
