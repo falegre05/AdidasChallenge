@@ -10,11 +10,11 @@ Due to there are 2 services, you have to build the JAR files separately before c
 ## Jars and images build
 
 cd citiesServer
-./mvnw clean package citiesServer
+./mvnw clean package 
 docker build -t citiesserver .
 
 cd ../citiesClient
-./mvnw clean package citiesClient
+./mvnw clean package
 docker build -t citiesclient .
 
 
@@ -45,8 +45,14 @@ http://localhost:9091/
 ```
 
 ### Swagger
+CitiesServer:
+```
+http://localhost:9090/swagger-ui/
 ```
 
+CitiesClient:
+```
+http://localhost:9091/swagger-ui/
 ```
 
 ## Libs
