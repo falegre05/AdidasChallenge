@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CitiesClientApplication<citiesClient>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "spring.challenge.citiesClient.CitiesClientApplication",
+            "projectName": "citiesClient",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CitiesServerApplication<citiesServer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "spring.challenge.citiesServer.CitiesServerApplication",
+            "projectName": "citiesServer",
+            "args": ""
+        }
+    ]
+}
