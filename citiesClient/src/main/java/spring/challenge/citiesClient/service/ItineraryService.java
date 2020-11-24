@@ -23,7 +23,19 @@ public class ItineraryService {
     private List<City> mCities;
 
     public List<Itinerary> getAllItineraries() {
-        return null;
+        if (mCities == null) {
+            mCities = new ArrayList<City>(ItineraryRepository.getAllCities());
+        }
+
+        List<Itinerary> itineraries = new ArrayList<Itinerary>();
+        mCities.forEach(orig -> {
+            List<Itinerary> itinerariesByOrig = getItinerariesByOrigId(orig.getId());
+            itinerariesByOrig.forEach(itinerary -> {
+                itineraries.add(itinerary);
+            });
+        });
+
+        return itineraries;
     }
 
     public List<Itinerary> getItinerariesByOrigId(Long id) {
