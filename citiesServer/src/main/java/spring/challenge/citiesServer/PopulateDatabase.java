@@ -29,7 +29,7 @@ class PopulateDatabase {
         City santiago = new City("Santiago de Compostela", 96405, 42.88052, -8.54569);
         City plasencia = new City("Plasencia", 40141, 40.03116, -6.08845);
         City bilbao = new City("Bilbao", 345821, 43.26271, -2.92528);
-        City santander = new City("Santader", 172044, 43.46472, -3.80444);
+        City santander = new City("Santander", 172044, 43.46472, -3.80444);
         City valladolid = new City("Valladolid", 298412, 41.65518, -4.72372);
         City ciudadreal = new City("Ciudad Real", 74746, 38.98626, -3.92907);
 
