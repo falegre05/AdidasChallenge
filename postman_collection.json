@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "dab4d000-0bb0-42bb-942f-1f0a34a6e5ca",
+		"name": "cities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{citiesServer}}/city",
+					"host": [
+						"{{citiesServer}}"
+					],
+					"path": [
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test\", \"population\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{citiesServer}}/city/",
+					"host": [
+						"{{citiesServer}}"
+					],
+					"path": [
+						"city",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCity",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test\", \"population\": 50000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{citiesServer}}/city/13",
+					"host": [
+						"{{citiesServer}}"
+					],
+					"path": [
+						"city",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCity",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{citiesServer}}/city/13",
+					"host": [
+						"{{citiesServer}}"
+					],
+					"path": [
+						"city",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetConnection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{citiesServer}}/connection/",
+					"host": [
+						"{{citiesServer}}"
+					],
+					"path": [
+						"connection",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetConnectionsByOrigId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{citiesServer}}/connection/origin/5",
+					"host": [
+						"{{citiesServer}}"
+					],
+					"path": [
+						"connection",
+						"origin",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetConnectionsByDestId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{citiesServer}}/connection/destiny/5",
+					"host": [
+						"{{citiesServer}}"
+					],
+					"path": [
+						"connection",
+						"destiny",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItinerary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{citiesClient}}/itinerary/5",
+					"host": [
+						"{{citiesClient}}"
+					],
+					"path": [
+						"itinerary",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
