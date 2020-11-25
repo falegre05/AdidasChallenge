@@ -33,6 +33,7 @@ class PopulateDatabase {
         City santander = new City("Santander", 172044, 43.46472, -3.80444);
         City valladolid = new City("Valladolid", 298412, 41.65518, -4.72372);
         City ciudadreal = new City("Ciudad Real", 74746, 38.98626, -3.92907);
+        City palma = new City("Palma de Mallorca", 416065, 39.56939, 2.65024);
 
         @Bean
         CommandLineRunner populateCities(CityRepository repository) {
@@ -53,6 +54,7 @@ class PopulateDatabase {
                         log.info("Inserting " + repository.save(santander));
                         log.info("Inserting " + repository.save(valladolid));
                         log.info("Inserting " + repository.save(ciudadreal));
+                        log.info("Inserting " + repository.save(palma));
                 };
         }
 
