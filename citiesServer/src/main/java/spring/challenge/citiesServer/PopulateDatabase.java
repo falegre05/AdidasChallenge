@@ -178,7 +178,7 @@ class PopulateDatabase {
                                         LocalTime.parse("00:00"), LocalTime.parse("04:30"))));
                         log.info("Inserting " + repository.save(new Connection(valladolid, madrid,
                                         LocalTime.parse("00:00"), LocalTime.parse("02:00"))));
-                        log.info("Inserting " + repository.save(new Connection(valladolid, madrid,
+                        log.info("Inserting " + repository.save(new Connection(valladolid, plasencia,
                                         LocalTime.parse("00:00"), LocalTime.parse("03:15"))));
                         log.info("Inserting " + repository.save(new Connection(valladolid, santiago,
                                         LocalTime.parse("00:00"), LocalTime.parse("04:00"))));
