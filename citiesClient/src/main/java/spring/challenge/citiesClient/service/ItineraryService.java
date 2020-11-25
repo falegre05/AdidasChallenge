@@ -102,7 +102,7 @@ public class ItineraryService {
             });
         }
 
-        throw new IllegalStateException("No route found");
+        return itinerary;
     }
 
     private Itinerary calcShorterTimeItinerary(City origin, City destiny) {
@@ -147,6 +147,6 @@ public class ItineraryService {
             });
         }
 
-        throw new IllegalStateException("No route found");
+        return itinerary;
     }
 }
