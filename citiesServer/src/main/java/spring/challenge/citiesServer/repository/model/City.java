@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModelProperty;
+
 // Entity representing cities with their id, name, population and coordinates.
 @Entity
 @Table(name = "cities")
@@ -13,10 +15,15 @@ public class City {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(notes = "City's auto-generated ID")
     private Long id;
+    @ApiModelProperty(notes = "City's name")
     private String name;
+    @ApiModelProperty(notes = "City's population")
     private int population;
+    @ApiModelProperty(notes = "City's X coordinate")
     private double coordX;
+    @ApiModelProperty(notes = "City's Y coordinate")
     private double coordY;
 
     public City() {

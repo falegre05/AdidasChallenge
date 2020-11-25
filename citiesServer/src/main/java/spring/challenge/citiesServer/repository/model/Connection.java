@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModelProperty;
+
 // Entity representing connections between cities with their id, origin and destiny city 
 // and departure and arrival time
 @Entity
@@ -18,17 +20,22 @@ public class Connection {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(notes = "Connection's auto-generated ID")
     private Long id;
 
     @ManyToOne
     @JoinColumn(name = "orig")
+    @ApiModelProperty(notes = "Connection's origin city")
     City orig;
 
     @ManyToOne
     @JoinColumn(name = "dest")
+    @ApiModelProperty(notes = "Connection's origin city")
     City dest;
 
+    @ApiModelProperty(notes = "Connection's departure time")
     private LocalTime departureTime;
+    @ApiModelProperty(notes = "Connection's arrival time")
     private LocalTime arrivalTime;
 
     public Connection() {

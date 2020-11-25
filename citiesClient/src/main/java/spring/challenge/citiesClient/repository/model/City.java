@@ -1,13 +1,18 @@
 package spring.challenge.citiesClient.repository.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import spring.challenge.citiesClient.CitiesClientApplication;
 
-// Representtion for city object
+// Representation for city object
 public class City {
 
+    @ApiModelProperty(notes = "City's auto-generated ID")
     private Long id;
+    @ApiModelProperty(notes = "City's name")
     private String name;
+    @ApiModelProperty(notes = "City's X coordinate")
     private double coordX;
+    @ApiModelProperty(notes = "City's Y coordinate")
     private double coordY;
 
     public City() {

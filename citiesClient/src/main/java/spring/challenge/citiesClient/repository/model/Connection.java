@@ -6,7 +6,7 @@ import java.time.LocalTime;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-// Representtion for connection object. Duration field is auto calculed.
+// Representation for connection object. Duration field is auto calculed.
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonDeserialize(using = ConnectionDeserializer.class)
 public class Connection {
