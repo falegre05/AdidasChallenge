@@ -82,7 +82,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{citiesServer}}/city/13",
+					"raw": "{{citiesServer}}/city/15",
 					"host": [
 						"{{citiesServer}}"
 					],
@@ -145,6 +145,33 @@
 						"connection",
 						"destiny",
 						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostConnection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orig\": {\n        \"id\": 1,\n        \"name\": \"Madrid\",\n        \"population\": 3142991,\n        \"coordX\": 40.4165,\n        \"coordY\": -3.70256\n    },\n    \"dest\": {\n        \"id\": 15\n    },\n    \"departureTime\": \"00:00:00\",\n    \"arrivalTime\": \"03:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{citiesServer}}/connection/",
+					"host": [
+						"{{citiesServer}}"
+					],
+					"path": [
+						"connection",
+						""
 					]
 				}
 			},
