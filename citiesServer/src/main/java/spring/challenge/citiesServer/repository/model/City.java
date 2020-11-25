@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// Entity representing cities with their id, name, population and coordinates.
 @Entity
 @Table(name = "cities")
 public class City {
@@ -17,10 +18,6 @@ public class City {
     private int population;
     private double coordX;
     private double coordY;
-
-    // @JsonManagedReference
-    // @OneToMany(mappedBy = "orig")
-    // private Set<Connection> connections;
 
     public City() {
     }
@@ -71,14 +68,6 @@ public class City {
     public void setCoordY(double coordY) {
         this.coordY = coordY;
     }
-
-    // public Set<Connection> getConnections() {
-    // return connections;
-    // }
-
-    // public void setConnections(Set<Connection> connections) {
-    // this.connections = connections;
-    // }
 
     @Override
     public boolean equals(Object obj) {

@@ -4,6 +4,7 @@ import java.util.List;
 
 import spring.challenge.citiesClient.repository.model.City;
 
+// Object made to deal with responses from the api. It represents a whole itinerary/route between to cities 
 public class Itinerary {
 
     public enum Order {

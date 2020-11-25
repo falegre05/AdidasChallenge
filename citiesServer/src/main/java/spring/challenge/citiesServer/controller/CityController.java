@@ -32,12 +32,6 @@ public class CityController {
         return cityRepository.findById(id).orElseThrow(() -> new CityNotFoundException(id));
     }
 
-    // @GetMapping("/{name}")
-    // City getCityById(@PathVariable String name) {
-    // return cityRepository.findByName(name).orElseThrow(() -> new
-    // CityNotFoundException(name));
-    // }
-
     @PostMapping(path = { "/", "" })
     City newCity(@RequestBody City newCity) {
         return cityRepository.save(newCity);

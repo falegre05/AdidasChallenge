@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+// Entity representing connections between cities with their id, origin and destiny city 
+// and departure and arrival time
 @Entity
 @Table(name = "connections")
 public class Connection {
@@ -18,7 +20,6 @@ public class Connection {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "orig")
     City orig;

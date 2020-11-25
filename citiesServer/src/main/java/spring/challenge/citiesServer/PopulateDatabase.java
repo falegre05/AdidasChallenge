@@ -13,6 +13,7 @@ import spring.challenge.citiesServer.repository.ConnectionRepository;
 import spring.challenge.citiesServer.repository.model.City;
 import spring.challenge.citiesServer.repository.model.Connection;
 
+// Class made just to initialize the database with some tests cases on start
 @Configuration
 class PopulateDatabase {
 

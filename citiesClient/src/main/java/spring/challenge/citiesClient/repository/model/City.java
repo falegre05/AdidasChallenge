@@ -2,6 +2,7 @@ package spring.challenge.citiesClient.repository.model;
 
 import spring.challenge.citiesClient.CitiesClientApplication;
 
+// Representtion for city object
 public class City {
 
     private Long id;
@@ -96,8 +97,8 @@ public class City {
         return "City [id=" + id + ", name=" + name + ", coordX=" + coordX + ", coordY=" + coordY + "]";
     }
 
-    // Calc distance in straight line between 2 cities using Pythagorean
-    // trigonometry
+    // Calc distance in straight line between 2 cities using their coordinates and
+    // some Pythagorean trigonometry
     public double calcStraightLine(City dest) {
         final int EARTH_RADIUS = 6371;
 
@@ -115,14 +116,14 @@ public class City {
         return EARTH_RADIUS * Math.sqrt(x * x + y * y);
     }
 
-    // Estimates how many minutes will take to arrive from one city to another with
-    // constant speed and straight line
+    // Estimates how many minutes will it take to arrive from one city to another
+    // one following an straight and with constant speed. 100km/h right now.
     public int calcEstimatedTime(City dest) {
         return (int) (this.calcStraightLine(dest) / CitiesClientApplication.SPEED) * 60;
     }
 
-    // Estimates how many connections with other cities will take to arrive from one
-    // city to another in straight line
+    // Estimates how many connections with other cities will it take to arrive from
+    // one city to another in straight line. 1 connection per 400km aprox
     public int calcEstimatedConns(City dest) {
         return (int) (this.calcStraightLine(dest) / CitiesClientApplication.KM_CONN);
     }

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 
+// Deseralizer for Conection object and its right construction to auto calculate the "duration" field
 public class ConnectionDeserializer extends JsonDeserializer<Connection> {
     @Override
     public Connection deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)

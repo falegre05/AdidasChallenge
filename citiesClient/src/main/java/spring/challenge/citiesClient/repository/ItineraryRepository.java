@@ -19,6 +19,7 @@ public class ItineraryRepository {
     @Value("${cities.server.port}")
     private String mPort;
 
+    // Calculates the route from every origin city to every destiny city.
     public List<City> getAllCities() {
         String url = "http://" + mIp + ":" + mPort + "/city/";
         RestTemplate restTemplate = new RestTemplate();
@@ -26,6 +27,7 @@ public class ItineraryRepository {
         return Arrays.asList(cities.getBody());
     }
 
+    // Calculates the route from a given origin city to every destiny city.
     public List<Connection> getConnsByOrigId(Long id) {
         String url = "http://" + mIp + ":" + mPort + "/connection/origin/" + id;
         RestTemplate restTemplate = new RestTemplate();

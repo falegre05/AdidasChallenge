@@ -2,6 +2,8 @@ package spring.challenge.citiesClient.service.model;
 
 import spring.challenge.citiesClient.repository.model.City;
 
+// Object made to get A* algorithm based on less time working with the particularity that 
+// it also stores the number of connections to get to an specific city from the origin one
 public class ItineraryTimeNode implements Comparable<ItineraryTimeNode> {
     private City current;
     private City previous;
