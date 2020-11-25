@@ -20,6 +20,7 @@ public class SwaggerConfig {
 
     private ApiInfo metaData() {
         return new ApiInfoBuilder().title("CitiesServer REST API")
-                .description("\"Spring Boot REST API cities and connections information\"").version("1.0.0").build();
+                .description("\"Spring Boot REST API for cities and connections information\"").version("1.0.0")
+                .build();
     }
 }
