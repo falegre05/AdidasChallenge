@@ -1,0 +1,66 @@
+Relation of connections in the database with its corresponding times:
+
+SELECT c1.name as orig, c2.name as dest, (arrival_time - departure_time) as duration 
+    FROM connections con 
+    JOIN cities c1 ON con.orig = c1.id 
+    JOIN cities c2 ON con.dest = c2.id 
+    ORDER BY orig, dest;
+
+
+          orig          |          dest          | duration 
+------------------------+------------------------+----------
+ Barcelona              | Valencia               | 03:30:00
+ Barcelona              | Zaragoza               | 03:00:00
+ Bilbao                 | Santander              | 01:00:00
+ Bilbao                 | Valladolid             | 02:50:00
+ Bilbao                 | Zaragoza               | 03:00:00
+ Ciudad Real            | Granada                | 02:25:00
+ Ciudad Real            | Madrid                 | 02:00:00
+ Ciudad Real            | Murcia                 | 03:15:00
+ Ciudad Real            | Plasencia              | 03:20:00
+ Ciudad Real            | Sevilla                | 03:30:00
+ Ciudad Real            | Valencia               | 03:15:00
+ Granada                | Ciudad Real            | 02:25:00
+ Granada                | Málaga                 | 01:30:00
+ Granada                | Murcia                 | 02:45:00
+ Granada                | Sevilla                | 02:40:00
+ Madrid                 | Ciudad Real            | 02:00:00
+ Madrid                 | Plasencia              | 03:00:00
+ Madrid                 | Valencia               | 03:30:00
+ Madrid                 | Valladolid             | 02:00:00
+ Madrid                 | Zaragoza               | 03:00:00
+ Málaga                 | Granada                | 01:30:00
+ Málaga                 | Sevilla                | 02:00:00
+ Murcia                 | Ciudad Real            | 03:15:00
+ Murcia                 | Granada                | 02:45:00
+ Murcia                 | Valencia               | 02:15:00
+ Plasencia              | Ciudad Real            | 03:20:00
+ Plasencia              | Madrid                 | 03:00:00
+ Plasencia              | Sevilla                | 03:20:00
+ Plasencia              | Valladolid             | 03:15:00
+ Santander              | Bilbao                 | 01:00:00
+ Santander              | Santiago de Compostela | 04:20:00
+ Santander              | Valladolid             | 02:30:00
+ Santiago de Compostela | Santander              | 04:20:00
+ Santiago de Compostela | Valladolid             | 04:00:00
+ Sevilla                | Ciudad Real            | 03:30:00
+ Sevilla                | Granada                | 02:40:00
+ Sevilla                | Málaga                 | 02:00:00
+ Sevilla                | Plasencia              | 03:20:00
+ Valencia               | Barcelona              | 03:30:00
+ Valencia               | Ciudad Real            | 03:15:00
+ Valencia               | Madrid                 | 02:20:00
+ Valencia               | Murcia                 | 02:15:00
+ Valencia               | Zaragoza               | 03:30:00
+ Valladolid             | Bilbao                 | 02:50:00
+ Valladolid             | Madrid                 | 02:00:00
+ Valladolid             | Plasencia              | 03:15:00
+ Valladolid             | Santander              | 02:30:00
+ Valladolid             | Santiago de Compostela | 04:00:00
+ Valladolid             | Zaragoza               | 04:30:00
+ Zaragoza               | Barcelona              | 03:00:00
+ Zaragoza               | Bilbao                 | 03:00:00
+ Zaragoza               | Madrid                 | 03:00:00
+ Zaragoza               | Valencia               | 03:30:00
+ Zaragoza               | Valladolid             | 04:30:00
+(54 rows)
