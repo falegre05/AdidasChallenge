@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import spring.challenge.citiesClient.exceptions.CityNotFoundException;
@@ -20,11 +21,14 @@ import spring.challenge.citiesClient.service.model.ItineraryTimeNode;
 @Service
 public class ItineraryService {
 
+    @Autowired
+    ItineraryRepository itineraryRepository;
+
     private List<City> mCities;
 
     public List<Itinerary> getAllItineraries() {
         if (mCities == null) {
-            mCities = new ArrayList<City>(ItineraryRepository.getAllCities());
+            mCities = new ArrayList<City>(itineraryRepository.getAllCities());
         }
 
         List<Itinerary> itineraries = new ArrayList<Itinerary>();
@@ -40,7 +44,7 @@ public class ItineraryService {
 
     public List<Itinerary> getItinerariesByOrigId(Long id) {
         if (mCities == null) {
-            mCities = new ArrayList<City>(ItineraryRepository.getAllCities());
+            mCities = new ArrayList<City>(itineraryRepository.getAllCities());
         }
 
         City origin = mCities.stream().filter(city -> city.getId() == id).findAny()
@@ -82,7 +86,7 @@ public class ItineraryService {
                 return itinerary;
             }
 
-            ItineraryRepository.getConnsByOrigId(next.getCurrent().getId()).forEach(connection -> {
+            itineraryRepository.getConnsByOrigId(next.getCurrent().getId()).forEach(connection -> {
                 City city = connection.getDest();
                 ItineraryConnsNode nextNode = allNodes.getOrDefault(city, new ItineraryConnsNode(city));
                 allNodes.put(city, nextNode);
@@ -127,7 +131,7 @@ public class ItineraryService {
                 return itinerary;
             }
 
-            ItineraryRepository.getConnsByOrigId(next.getCurrent().getId()).forEach(connection -> {
+            itineraryRepository.getConnsByOrigId(next.getCurrent().getId()).forEach(connection -> {
                 City city = connection.getDest();
                 ItineraryTimeNode nextNode = allNodes.getOrDefault(city, new ItineraryTimeNode(city));
                 allNodes.put(city, nextNode);
